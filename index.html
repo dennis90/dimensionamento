@@ -1,1 +1,117 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta content="Calculadora de dimensionamento de bitola de cabos elétricos, dimensionamento de fios para instalações elétricas. Descubra qual fiação utilizar" name="description"><meta name="robots" content="index"><meta name="robots" content="nofollow"><link rel="manifest" href="/dimensionamento/manifest.json"><link rel="shortcut icon" href="/dimensionamento/favicon.ico"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-126628196-1"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-126628196-1")</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-9221961636055266",enable_page_level_ads:!0})</script><title>Calculadora de dimensionamento de Cabos</title><link href="/dimensionamento/static/css/main.97e0a736.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/dimensionamento/static/js/main.9e6559fa.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta
+    content="Calculadora de dimensionamento de bitola de cabos elétricos, dimensionamento de fios para instalações elétricas. Descubra qual fiação utilizar"
+    name="description"
+  >
+  <meta name="robots" content="index">
+  <meta name="robots" content="nofollow">
+
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/calculate.js"></script>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="assets/css/index.css" >
+
+  <!-- Start Google stuff -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126628196-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126628196-1');
+  </script>
+
+  <!-- Google ads stuff -->
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-9221961636055266",
+      enable_page_level_ads: true
+    });
+  </script>
+
+  <!-- End Google stuff -->
+
+
+  <title>Calculadora de dimensionamento de Cabos</title>
+</head>
+<body>
+  <div class="header">
+    <header class="app-header">
+      <h1 class="title">Calculadora de dimensionamento de cabos</h1>
+    </header>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" id="result-id"></div>
+      <div class="col-md-6 offset-md-3 spaced">
+        <form id="form-el">
+          <div class="position-relative form-group">
+            <label for="potencia-id">Potência (em Watts):</label>
+            <input value="4300" type="number" id="potencia-id" class="form-control">
+          </div>
+
+          <div class="position-relative form-group">
+            <label for="tensao-id">Tensão (em Volts):</label>
+            <input value="127" type="number" id="tensao-id" class="form-control">
+          </div>
+
+          <button class="btn btn-primary">Calcular</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2>
+          Como calcular a bitola de fios elétricos
+        </h2>
+
+        <p>
+          Antes de criar algum circuito elétrico ou mesmo alguma extensão é necessário planejar qual será a fiação
+          necessária para evitar problemas futuros (como superaquecimento e gastos desnecessários com cabos),
+          você pode utilizar a nossa calculadora de dimensionamento de cabos para descobrir qual a bitola do fio
+          necessária para suas necessidades, para efetuar este cálculo, você pode utilizar os seguintes passos:
+        </p>
+
+        <ol>
+          <li>
+            Descubra qual a potência de todos os itens que serão ligados neste circuito, você pode pegar alguns exemplos de potência de
+            alguns eletrodomésticos normalmente utilizados nesta <a href="http://www.eflul.com.br/consumidores/tabela-de-consumo" target="_blank" rel="noopener noreferrer">tabela</a> ou
+            então somando a potência (em Watts) de todos os eletrodomésticos que serão utilizados.
+          </li>
+
+          <li>
+            Informe qual a tensão da sua casa, esta informação normalmente pode ser obtida verificando a conta de energia de sua casa.
+          </li>
+        </ol>
+
+        <p>
+          Após obter estas informações, é só entrar com os dados no formulário acima, após efetuar o cálculo,
+          será exibida uma tabela contendo qual a dimensão adequada do fio a ser utilizado levando em consideração
+          de quantos metros de fios serão utilizados.
+
+          Esta tabela foi criada utilizando como base a <a href="https://www.iar.unicamp.br/lab/luz/ld/normas%20e%20relat%F3rios/NRs/nbr_5410.pdf" target="_blank" rel="noopener noreferrer">norma brasileira para instalações elétricas de baixa tensão</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      document.getElementById('form-el').addEventListener("submit", formSubmitHandler);
+  </script>
+
+</body>
+</html>
